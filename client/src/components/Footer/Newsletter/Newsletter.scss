@@ -1,0 +1,102 @@
+@import "../../../css-config/mixins.scss";
+
+.newsletter-section {
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9 url("../../../assets/newsletter-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .newsletter-content {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    .small-text {
+      margin-bottom: 0.9375rem;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .big-text {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1.25rem;
+      font-size: 1.375rem;
+      line-height: 1.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 0 1.875rem;
+      @include md {
+        font-size: 1.75rem;
+      }
+    }
+    .form {
+      display: flex;
+      gap: 0.3125rem;
+      margin-bottom: 0.625rem;
+      input {
+        width: 15.5rem;
+        height: 2.5rem;
+        border-radius: 0.1rem;
+        border: 0.0625rem solid #8728eb;
+        box-shadow: 0.125rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        padding: 0 0.75rem;
+        font-size: 1rem;
+        outline: none;
+        @include md {
+          width: 20rem;
+          height: 3rem;
+        }
+      }
+      button {
+        outline: none;
+        border: 0.0625rem solid #cccccc;
+        height: 2.5rem;
+        width: 6.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 500;
+        color: white;
+        background-image: linear-gradient(to right, #8728eb, #4a00e0);
+        box-shadow: 0.125rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        border-radius: 0.1rem;
+        @include md {
+          width: 7.5rem;
+          height: 2.9rem;
+        }
+      }
+    }
+    .text {
+      margin-bottom: 1.25rem;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .social-icons {
+      display: flex;
+      gap: 0.625rem;
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-image: linear-gradient(to left, #8c33eb, #5813e1);
+        color: rgb(255, 255, 255);
+        width: 2.5rem;
+        height: 2.5rem;
+        transition: 0.3s;
+        box-shadow: 0.125rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+        &:hover {
+          background-image: linear-gradient(to bottom, #8c33eb, #5813e1);
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}

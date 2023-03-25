@@ -1,0 +1,146 @@
+@import "../../css-config/mixins.scss";
+
+.single-product-main-content {
+  margin: 1.25rem auto;
+  padding: 0 0.5rem;
+  @include md {
+    margin: 4.6875rem 0;
+    padding: 0 2.5rem;
+  }
+  .layout {
+    max-width: calc(100% - 1.25rem);
+    margin: 0 auto;
+    @include md {
+      max-width: 75rem;
+    }
+    .single-product-page {
+      display: flex;
+      flex-direction: column;
+      @include md {
+        flex-direction: row;
+      }
+      .left {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.05);
+        flex-shrink: 0;
+        @include md {
+          width: 27.5rem;
+          height: 27.5rem;
+        }
+        @include lg {
+          width: 37.5rem;
+          height: 37.5rem;
+        }
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1.25rem;
+        margin-top: 1rem;
+        @include md {
+          padding: 0 2.1875rem;
+          margin: 0;
+        }
+        .name {
+          font-size: 1.25rem;
+          line-height: 1.75rem;
+          margin-bottom: 1.25rem;
+          @include md {
+            font-size: 1.5rem;
+            line-height: 2rem;
+          }
+        }
+        .price {
+          font-size: 1.5rem;
+          line-height: 2rem;
+          margin-bottom: 1.25rem;
+        }
+        .desc {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+          margin-bottom: 1.25rem;
+          color: #6b6b6b;
+          @include md {
+            font-size: 1rem;
+            line-height: 1.5rem;
+          }
+        }
+        .cart-buttons {
+          display: flex;
+          @include md {
+            margin-top: 1.875rem;
+          }
+          .quantity-buttons {
+            width: fit-content;
+            display: flex;
+            border: 0.125rem solid rgba(0, 0, 0, 0.2);
+            margin-right: 0.625rem;
+            height: 2.8125rem;
+            span {
+              font-size: 1.125rem;
+              width: 2.5rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              color: #6b6b6b;
+              &:nth-child(1) {
+                border-right: 0.125rem solid rgba(0, 0, 0, 0.2);
+              }
+              &:nth-child(2) {
+                width: 3.75rem;
+              }
+              &:nth-child(3) {
+                border-left: 0.125rem solid rgba(0, 0, 0, 0.2);
+              }
+            }
+          }
+          .add-to-cart-button {
+            outline: 0;
+            border: 0;
+            height: 2.8125rem;
+            width: 6.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1rem;
+            color: white;
+            background-color: #8e2de2;
+            border-bottom: 0.1875rem solid #6516aa;
+            flex-grow: 1;
+          }
+        }
+        .divider {
+          margin: 1.25rem 0;
+          height: 0.0625rem;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+        .info-item {
+          .text-bold {
+            font-size: 1.125rem;
+            font-weight: 500;
+            display: block;
+            &:nth-child(1) {
+              margin-bottom: 1.25rem;
+            }
+          }
+          span {
+            font-size: 1rem;
+            font-weight: 400;
+            cursor: pointer;
+            color: #6b6b6b;
+          }
+          svg {
+            margin: 0 0.3125rem;
+          }
+        }
+      }
+    }
+  }
+}

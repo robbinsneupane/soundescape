@@ -1,0 +1,71 @@
+@import "../../css-config/mixins.scss";
+.footer {
+  width: 100%;
+  .footer-content {
+    padding: 3.125rem 1.25rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: wrap;
+    gap: 1.25rem;
+    @include md {
+      justify-content: space-between;
+      padding: 3.125rem 2.5rem;
+    }
+    .col {
+      max-width: 30rem;
+      .title {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+      }
+      .text {
+        color: rgba($color: #000000, $alpha: 0.5);
+        font-size: 0.875rem;
+      }
+      .c-item {
+        display: flex;
+        margin-bottom: 0.625rem;
+        font-size: 0.875rem;
+        color: rgba($color: #000000, $alpha: 0.5);
+        svg {
+          flex-shrink: 0;
+          font-size: 0.875rem;
+          margin-right: 0.625rem;
+          margin-top: 0.25rem;
+          color: rgba($color: #000000, $alpha: 0.5);
+        }
+      }
+      span {
+        &.text {
+          display: block;
+          margin-bottom: 0.625rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .bottom-bar {
+    border-top: 0.0625rem solid rgba($color: #000000, $alpha: 0.1);
+    .bottom-bar-content {
+      padding: 1.25rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 0.625rem;
+      @include md {
+        padding: 0 2.5rem;
+        height: 3.75rem;
+        max-width: 75rem;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .text {
+        font-size: 0.75rem;
+        color: rgba($color: #000000, $alpha: 0.5);
+      }
+    }
+  }
+}
